@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<td width="125"><img src="/image/lo.PNG" alt="logo" width="150" height="50"/></td>
+<style>
+a:link, a:visited {
+  background-color: #FFA500;
+  color: white;
+  padding: 14px 25px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: blue;
+}
+body {
+  background-image: url("/image/Dark.jpg"); 
+  background-repeat:no repeat;
+  background-size:100%
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 1%;
+width: 100%; height: 5%;
+color: black;
+text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+s
+/* Style the search box */
+#mySearch {
+  width: 50%;
+  font-size: 18px;
+  padding: 11px;
+  border:1px solid blue;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+#myMenu li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: orange;}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+ 
+
+</style>
+<link rel="stylesheet"type="text/css"href=external.css>
+ 
+</head>
+<body>
+<table>
+<tr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr valign="top">
+<td
+		<div align="center" class="header">
+<h1 id="u"></h1>
+  <div class="a">
+    <a href="/">Home</a>
+    <a href="/Reportlossed">Report Lost </a>
+    <a href="/Reportfound">Report Found</a>
+    <a href="/aboutus">About us</a>
+    <a href="/contactus">Contact</a>
+    <a href="/admin">Admin</a>
+</div>
+</div>
+
+
+</td>
+      </tr>
+    </table>
+<br>
+<div style="background-color:lightgray;margin:0 auto; border-radius:1px;box-shadow:2px; width:1100px; height:7 00px">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr valign="top">
+        <td> 
+            <form action="/ella/document" method="POST">
+                <div style="margin-left: 110px; margin-top: 10px"> 
+                <blockquote><div align="left">
+                <h1 style="color:green">Report Lost</h1>
+                <table cellpadding="5">
+                <tr><td>Owners Name</td>
+                <td><input type="text" placeholder="Enter your names.. " id="a" name="name" required></td></tr>
+                <tr><td> Document type</td><td> 
+                <input type="text" placeholder="Enter your document type.." id="b" name="documentType" required></td></tr>
+                <tr><td>Location</td><td>
+                <input type="text" placeholder="Enter your Location.." id="c" name="location" required></td></tr>
+                <tr><td>Phone number</td>
+                <td><input type="text" placeholder="+250.." id="d" name="PhoneNumber" required ></td></tr>
+                <tr><td>Serial/Document</td>
+                    <td><input type="text" placeholder="Enter ,.." id="f" name="documentSerialNumber" required></td></tr>
+                    <tr><td<tr><form action="upload.php" method="post" enctype="multipart/form-data"></t>
+                  
+                <tr><td>comment</td>
+                   <td> <textarea rows="4" cols="50" name="comment">Enter text here...</textarea></td>
+ <tr><td><button input type="submit">submit</button></td></tr>
+</table></blockquote> 
+
+
+<script type="text/javascript">
+function you()
+{
+var e = document.getElementById("a").value;
+var d = document.getElementById("b").value;
+var c = document.getElementById("c").value;
+var b = document.getElementById("d").value;
+var a = document.getElementById("e").value;
+var f = document.getElementById("f").value;
+var m = document.getElementById("j").value;
+var n = document.getElementById("h").value;
+var o = document.getElementById("i").value;
+var p = document.getElementById("g").value;
+var q;
+if(e=="")
+
+{
+q = "Please fill the form" ;
+document.getElementById("a").focus();
+
+}
+else if (d=="")
+{
+q= "Please fill the form " ;
+document.getElementById("b").focus();
+}
+
+else if (c=="")
+{
+q = "Please fill the form" ;
+document.getElementById("c").focus();
+
+}
+else if (b=="")
+{
+q = "Please fill the form" ;
+document.getElementById("d").focus();
+
+}
+else if (a=="")
+{
+q = "Please fill the form" ;
+document.getElementById("e").focus();
+
+}
+else if (f=="")
+{
+q="please fill the form";
+document.getElementById("f").focus();
+}
+else i (m=="")
+{
+q="please fill the form";
+document.getElementById("j").focus();
+}
+else if (n=="")
+{
+q="plaese fill the form";
+document.getElementById("h").focus();
+}
+else if (o=="")
+q="plase fill the form";
+document.getElementById("i").focus();
+}
+else if (p=="")
+q="plaese fill the form";
+document.getElementById("g").focus();
+}
+else 
+{
+
+document.write("<font "size:4">submited succesful</font>");
+}
+{
+document.getElementById("i").innerHTML= q;
+
+}
+</script>
+</form>
+<td>
+
+	</tr>
+	</td></td>
+</table>
+</div>
+</td>
+		</td>
+      </tr>
+	 </tr>
+	 </div>
+	 </table><br><br>
+	<div  class="footer_padding" style="margin-left:-100px; margin-right:-100px">
+<p align="center">copy_right by esther ishimwe</p></div>
+ </table>
+	</body>
+</html>

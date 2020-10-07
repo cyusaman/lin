@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<style>
+a:link, a:visited {
+  background-color:#FFA500;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: 	#D3D3D3;
+}
+body {
+  background-image: url("/image/Dark.jpg"); 
+  background-repeat:no repeat;
+  background-size:100%
+}
+{
+background-color:grey;
+width:700px;
+}
+input=["text"]{
+margin:200px;
+width:40px;
+font-size:40px;
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 1%;
+width: 100%; height: 5%;
+color: black;
+text-align: center;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 50%;
+  font-size: 18px;
+  padding: 11px;
+  border:1px solid 	#D3D3D3;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+input[type=submit] {
+  background-color: #FFA500;
+  color: white;
+  padding: 1px 1px;
+  border: none;
+  border-radius: px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: 	#D3D3D3;
+}
+
+.container {
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+right: 500px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+ right: 500px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 1px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: 	#FFA500;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: orange;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+</style>
+<link rel="stylesheet"type="text/css"href=external.css>
+</head>
+<body>
+<tr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr valign="top">
+        <td width="125"><img src="/image/lo.PNG" alt="logo" width="150" height="50"/></td><td>
+</table>
+		<div align="center" class="header">
+<div class="header">
+  <center><div class="a">
+    <a href="/">Home</a>
+    <a href="/Reportlossed">Report lossed </a>
+    <a href="/Reportfound">Report Found</a>
+    <a href="/aboutus">About us</a>
+    <a href="/contactus">Contact</a>
+    <a href="/admin">Admin</a>
+</div></center>
+<br>
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <div class="form-container">
+    <!-- <form  > -->
+    <h1>Login </h1>
+<form action="/ella/login" method="POST" >
+    <label for="email"><b>Names</b></label>
+    <input type="text" placeholder="Enter Names"   name="username" required>
+	<label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password"  name="password" required>
+
+
+<button type="submit">Login</button>
+	
+    <a href="/signup">Register</a>
+	
+  </form>
+  </div>
+  
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+</script>
+
+<script>
+  function you()
+  {
+  var e = document.getElementById("a").value;
+  var d = document.getElementById("b").value;
+  var c = document.getElementById("c").value;
+  var n;
+  if(e=="")
+  
+  {
+  s = "Please fill the form" ;
+  document.getElementById("a").focus();
+  
+  }
+  else if (d=="")
+  {
+  s= "Please fill the form " ;
+  document.getElementById("b").focus();
+  }
+  
+  else if (c=="")
+  {
+  s = "Please fill the form" ;
+  document.getElementById("c").focus();
+  
+  }
+  
+  else 
+  {
+  
+  document.write("<font "size:4">submited succesful</font>");
+  }
+  {
+  document.getElementById("i").innerHTML= n;
+  
+  }
+  </script>
+</body><br><br>
+<div class="footer">
+<h5>copy_right by esther ishimwe</h5>
+</html>
