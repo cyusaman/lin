@@ -224,6 +224,7 @@ right: 500px;
 <div class="header">
   <center><div class="a">
     <a href="/">Home</a>
+    <a href="/searchReport">search Report</a>
     <a href="/Reportlossed">Report lossed </a>
     <a href="/Reportfound">Report Found</a>
     <a href="/aboutus">About us</a>
@@ -234,11 +235,11 @@ right: 500px;
 <button class="open-button" onclick="openForm()">Open Form</button>
 
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <div  class="form-container">
     <h1>Admin Form</h1>
-<form action="/ella/login" method="POST" >
+<form action="/ella/loginAdmin" method="POST" >
 <label for="email"><b>User Name</b></label>
-    <input type="text" placeholder="Enter Name" id="a" name="Name" required >
+    <input type="text" placeholder="Enter Name" id="a" name="username" required >
 	<label for="psw"><b>Password</b></label>
     <input  type="password" placeholder="Enter Password" id="c" name="password" required>
 <script>
@@ -283,6 +284,7 @@ document.getElementById("i").innerHTML= n;
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
 	
   </form>
+  </div>
 </div>
 
 <script>

@@ -19,9 +19,9 @@ app.use(morgan('dev'))
 dotenv.config({path: './config/config.env'})
 connectdb();
 
-app.use('/ella', document)
+app.use(document)
 app.use('/ella', user)
-app.use('/ella', contact)
+app.use(contact)
 // app.use('', (req,res,next)=>{
 //     console.log('hello')
 // })
@@ -38,7 +38,9 @@ app.get('/Reportlossed', (req, res, next)=>{
 app.get('/Reportfound', (req, res, next)=>{
     res.render('report')
 })
-
+// app.get('/searchReport', (req, res, next)=>{
+//     res.render('searchReport')
+// })
 app.get('/aboutus', (req, res, next)=>{
     res.render('about')
 })
@@ -51,6 +53,10 @@ app.get('/admin', (req, res, next)=>{
     res.render('admin')
 })
 
+// app.get('/adminTab', (req, res, next)=>{
+//     res.render('adminData')
+// })
+
 app.get('/trythis', (req, res, next)=>{
     res.render('try this')
 })
@@ -58,6 +64,7 @@ app.get('/trythis', (req, res, next)=>{
 app.get('/signup', (req, res, next)=>{
     res.render('signup')
 })
+
 const PORT = 8000 || process.env.PORT
 
 app.listen(8000, console.log(`am listen on ${PORT}`))

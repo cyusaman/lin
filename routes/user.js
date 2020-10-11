@@ -2,7 +2,8 @@ const express = require('express')
 const path= require('path')
 const {
     loginUser,
-    createUser
+    createUser,
+    loginAdmin
     }= require('../controllers/user.js')
 const router = express.Router()
 
@@ -17,6 +18,11 @@ router
 router
     .route('/login')
     .post(loginUser)
+
+
+    router
+    .route('/loginAdmin')
+    .post(loginAdmin)
 
 
 

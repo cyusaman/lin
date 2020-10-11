@@ -248,7 +248,8 @@ button:hover {
 <h1 id="u"></h1>
   <div class="a">
     <a href="/">Home</a>
-    <a href="/Reportlossed">Report Lost </a>
+    <a href="/searchReport">search Report</a>
+    <a href="/Reportlossed">Report lossed </a>
     <a href="/Reportfound">Report Found</a>
     <a href="/aboutus">About us</a>
     <a href="/contactus">Contact</a>
@@ -265,11 +266,13 @@ button:hover {
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr valign="top">
         <td> 
-            <form action="/ella/document" method="POST">
+            <form action="/document" method="POST">
                 <div style="margin-left: 110px; margin-top: 10px"> 
                 <blockquote><div align="left">
                 <h1 style="color:green">Report Lost</h1>
                 <table cellpadding="5">
+                  <tr><td>Reporter Names</td>
+                    <td><input type="text" placeholder="Enter your names.. " id="a" name="reporter" required></td></tr>
                 <tr><td>Owners Name</td>
                 <td><input type="text" placeholder="Enter your names.. " id="a" name="name" required></td></tr>
                 <tr><td> Document type</td><td> 

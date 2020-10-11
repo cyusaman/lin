@@ -25,6 +25,9 @@ const documentSchema = new mongoose.Schema({
     comment : {
         type: String,
     },
+    reporter:{
+        type: String,
+    }
   })
 
 module.exports = mongoose.model('Document', documentSchema)

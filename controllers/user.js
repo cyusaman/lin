@@ -21,6 +21,7 @@ exports.createUser = async (req,res, next) =>{
         //     email
         // })
     } catch (err) {
+        res.redirect('/trythis');
         console.log(err.message)
     }
 }
@@ -30,9 +31,6 @@ exports.loginUser = async (req,res,next) => {
         const username = req.body.username
         const password= req.body.password
         // res.redirect('/');
-        if (username === 'esther ishimwe') {
-            console.log('hello')
-        }
         // console.log(username,password)
         if (!username || !password) {
             const pl = 'please enter username and password'
@@ -40,22 +38,11 @@ exports.loginUser = async (req,res,next) => {
         }
         const user =  await User.findOne({ username }).select('+password')
         if (!user) {
-            res
-            .status(400)
-            .json({
-                success:false,
-                sms: 'invalid credentials'
-            })
-            next()
+            res.redirect('/trythis');
         }
         const match = await user.matchpass(password);
         if (!match) {
-            res
-            .status(401)
-            .json({
-                sms: 'invalid credentialshdsjd'
-            })
-            next()
+            res.redirect('/trythis');
         }
         const token = await user.webtoken()
         res.redirect('/');
@@ -67,5 +54,39 @@ exports.loginUser = async (req,res,next) => {
         // })
     } catch (err) {
         console.log(`${err.message} holla`)
+        res.redirect('/admin');
+    }
+}
+
+exports.loginAdmin = async (req,res,next) => {
+    try {
+        // const {username, password} = req.body
+        const username = req.body.username
+        const password= req.body.password
+        // res.redirect('/');
+        // console.log(username,password)
+        if (!username || !password) {
+            const pl = 'please enter username and password'
+            return pl
+        }
+        const user =  await User.findOne({ username }).select('+password')
+        if (!user) {
+            res.redirect('/admin');
+        }
+        const match = await user.matchpass(password);
+        if (!match) {
+            res.redirect('/admin');
+        }
+        const token = await user.webtoken()
+        res.redirect('/contacts');
+        // res
+        // .status(200)
+        // .json({
+        //     success: true,
+        //     token,
+        // })
+    } catch (err) {
+        console.log(`${err.message} holla`)
+        res.redirect('/admin');
     }
 }

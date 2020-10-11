@@ -3,7 +3,7 @@
 <head>
   
 <style>
-a:link, a:visited {
+.link, link:visited {
   background-color:#FFA500;
   color: white;
   padding: 14px 25px;
@@ -11,8 +11,10 @@ a:link, a:visited {
   text-decoration: none;
   display: inline-block;
 }
-
-a:hover, a:active {
+.link:hover, a:active {
+  background-color: 	#D3D3D3;
+}
+.login:hover, a:active {
   background-color: 	#D3D3D3;
 }
 body {
@@ -210,7 +212,20 @@ right: 500px;
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-
+.login{
+  background-color:orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.Dont{
+  font-size: 12px;
+  margin-right: 12px;
+}
 </style>
 <link rel="stylesheet"type="text/css"href=external.css>
 </head>
@@ -223,12 +238,13 @@ right: 500px;
 		<div align="center" class="header">
 <div class="header">
   <center><div class="a">
-    <a href="/">Home</a>
-    <a href="/Reportlossed">Report lossed </a>
-    <a href="/Reportfound">Report Found</a>
-    <a href="/aboutus">About us</a>
-    <a href="/contactus">Contact</a>
-    <a href="/admin">Admin</a>
+    <a class="link" href="/">Home</a>
+    <a class="link" href="/searchReport">search Report</a>
+    <a class="link" href="/Reportlossed">Report lossed </a>
+    <a class="link" href="/Reportfound">Report Found</a>
+    <a class="link" href="/aboutus">About us</a>
+    <a class="link" href="/contactus">Contact</a>
+    <a class="link" href="/admin">Admin</a>
 </div></center>
 <br>
 <button class="open-button" onclick="openForm()">Open Form</button>
@@ -244,9 +260,9 @@ right: 500px;
     <input type="password" placeholder="Enter Password"  name="password" required>
 
 
-<button type="submit">Login</button>
+<button class="login" type="submit">Login</button>
 	
-    <a href="/signup">Register</a>
+   <span class="Dont"> Don't have an account</span><a href="/signup">Register</a>
 	
   </form>
   </div>

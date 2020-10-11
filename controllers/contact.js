@@ -26,10 +26,10 @@ exports.createContact= async (req,res, next) =>{
 
 exports.getcontact= async (req, res, next) =>{
     try {
-        const contact= await ContactUs.find()
-        res.status(200).json({
-            msg:'success',
-            contact
+        const contacts= await ContactUs.find()
+        // console.log(contacts)
+        res.render('adminData', {
+           contactsData:contacts
         })
     } catch (err) {
         console.log(err)

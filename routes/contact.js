@@ -5,6 +5,9 @@ const {createContact, getcontact}=require('../controllers/contact')
 router
     .route('/contactUs')
     .post(createContact)
+
+router
+    .route('/contacts')
     .get(getcontact)
 
 

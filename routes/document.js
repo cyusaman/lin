@@ -2,7 +2,7 @@ const express = require('express')
 const router= express.Router()
 
 
-const {createDocuments, documentSearch}= require('../controllers/document')
+const {createDocuments, documentSearch,getDocuments}= require('../controllers/document')
 
 router
     .route('/document')
@@ -11,6 +11,10 @@ router
 router
     .route('/document/:keyword')
     .get(documentSearch)
+
+    router
+    .route('/searchReport')
+    .get(getDocuments)
 
 
 
